@@ -430,5 +430,53 @@
       "address":null,
       "lat":54.670344,
       "lng":25.238915
-   }
+   },
+   {
+"owner": "13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
+"address": null,
+"lat": 54.674316,
+"lng": 25.250009
+},
+{
+"owner": "13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
+"address": null,
+"lat": 54.660609,
+"lng": 25.277499
+},
+{
+"owner": "13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
+"address": null,
+"lat": 54.673936,
+"lng": 25.265767
+},
+{
+"owner": "12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G",
+"address": null,
+"lat": 54.69034168273996,
+"lng": 25.287932839433235
+},
+{
+"owner": "12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G",
+"address": null,
+"lat": 54.69226401409042,
+"lng": 25.280669417613733
+},
+{
+"owner": "12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G",
+"address": null,
+"lat": 54.692115191694576,
+"lng": 25.283115592128595
+},
+{
+"owner": "13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
+"address": null,
+"lat": 54.720180,
+"lng": 25.226608
+},
+{
+"owner": "13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
+"address": null,
+"lat": 54.724373,
+"lng": 25.249988
+}
 ]
