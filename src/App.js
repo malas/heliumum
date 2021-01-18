@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, Polyline, Marker } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Polyline, Marker, InfoWindow } from "react-google-maps";
 import { geoToH3, h3ToGeoBoundary, kRing as h3KRing } from 'h3-js';
 import NumericInput from 'react-numeric-input';
 import data from './data.json';
@@ -30,102 +30,53 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function getMarker(data) {
+function getMarkerData(data) {
+  let ownerName = '';
+  let icon = '';
   switch(data.owner) {
     case '14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd':
-      // Aleksas
+      ownerName = "Aleksas";
+      icon = yellow_pin;
       if (data.address != null) {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={`https://maps.google.com/mapfiles/ms/icons/yellow-dot.png`}
-        >
-        </Marker>;
-      } else {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={yellow_pin}
-        >
-        </Marker>;
+        icon = `https://maps.google.com/mapfiles/ms/icons/yellow-dot.png`
       }
+      break;
     case '14CuUDZ3rXf8W7VBFJc7eB8VBWZ7cAAEDLgAEDkMGpW7U2uMLMk':
-      // Švedas
+      ownerName = "Švedas";
+      icon = blue_pin;
       if (data.address != null) {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={`https://maps.google.com/mapfiles/ms/icons/blue-dot.png`}
-        >
-        </Marker>;
-      } else {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={blue_pin}
-        >
-        </Marker>;
+        icon = `https://maps.google.com/mapfiles/ms/icons/blue-dot.png`
       }
+      break;
     case '13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz':
-      // Andrius
+      ownerName = "Andrius";
+      icon = purple_pin;
       if (data.address != null) {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={`https://maps.google.com/mapfiles/ms/icons/purple-dot.png`}
-        >
-        </Marker>;
-      } else {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={purple_pin}
-        >
-        </Marker>;
+        icon = `https://maps.google.com/mapfiles/ms/icons/purple-dot.png`
       }
+      break;
     case '12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G':
-      // Dima
+      ownerName = "Dima";
+      icon = orange_pin;
       if (data.address != null) {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={`https://maps.google.com/mapfiles/ms/icons/orange-dot.png`}
-        >
-        </Marker>;
-      } else {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={orange_pin}
-        >
-        </Marker>;
+        icon = `https://maps.google.com/mapfiles/ms/icons/orange-dot.png`
       }
+      break;
     case '13fnZtwwG9nSox7Srk3AtHMqQZ3q4bfdAztmJCR42g7BQoRB4Ym':
-      // Erikas
+      ownerName = "Erikas";
+      icon = green_pin;
       if (data.address != null) {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={`https://maps.google.com/mapfiles/ms/icons/green-dot.png`}
-        >
-        </Marker>;
-      } else {
-        return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={green_pin}
-        >
-        </Marker>;
-      }
+        icon = `https://maps.google.com/mapfiles/ms/icons/green-dot.png`      }
+      break;
     default:
-      // UNKOWN
-      return <Marker
-          position={data}
-          key={getRandomInt(10000000000)}
-          icon={`https://maps.google.com/mapfiles/ms/icons/red-dot.png`}
-        >
-        </Marker>;
+      ownerName = "UNKOWN";
+      icon = `https://maps.google.com/mapfiles/ms/icons/red-dot.png`;
+      break;
   }
+  return { 
+    "icon": icon,
+    "ownerName": ownerName
+  };
 }
 
 window.mapInstance = null
@@ -145,8 +96,29 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   </Marker>
 
   {props.cabPositions != null && props.cabPositions.map(cabPs => (
-    getMarker(cabPs)
+    <Marker
+      position={cabPs}
+      key={getRandomInt(10000000000)}
+      icon={getMarkerData(cabPs).icon}
+      onClick={() => props.handleMarkerClick(cabPs)}
+    >
+    </Marker>
   ))}
+  {props.infoWindowOpened != false && 
+    <InfoWindow
+      position={props.infoWindowOpened}
+      onCloseClick={props.handleInfoClick}
+    >
+      <div>
+        <div>Savininkas <a href={'https://explorer.helium.com/accounts/' + props.infoWindowOpened.owner} target="_blank">{getMarkerData(props.infoWindowOpened).ownerName}</a></div>
+        {props.infoWindowOpened.address != null && 
+          <div><a href={'https://explorer.helium.com/hotspots/' + props.infoWindowOpened.address} target="_blank">Statistika</a></div>
+        }
+        <div>lat: {props.infoWindowOpened.lat}</div>
+        <div>lng: {props.infoWindowOpened.lng}</div>
+      </div>
+    </InfoWindow>
+  }
   {
     props.hexagons.map(hex => (
       <Polyline
@@ -170,7 +142,8 @@ class App extends Component {
       lng: 25.282520002088617,
       resolution: 7,
       plantingMode: 'RIDER',
-      cabPositions: defaultCabPositions
+      cabPositions: defaultCabPositions,
+      infoWindowOpened: false
     };
 
     this.state.riderH3Index = geoToH3(this.state.lat, this.state.lng, this.state.resolution);
@@ -181,6 +154,8 @@ class App extends Component {
     this.handleOnClickPlantRider = this.handleOnClickPlantRider.bind(this);
     this.handleOnClickPlantCabs = this.handleOnClickPlantCabs.bind(this);
     this.handleOnClickRemoveCabs = this.handleOnClickRemoveCabs.bind(this);
+    this.handleToggleInfoOpen = this.handleToggleInfoOpen.bind(this);
+    this.handleToggleInfoClose = this.handleToggleInfoClose.bind(this);
   }
 
   handleInputChangekRing(num) {
@@ -204,6 +179,7 @@ class App extends Component {
     if (this.state.plantingMode === 'CABS') {
       this.updateCabsMarker(e)
     }
+    this.handleToggleInfoClose();
   }
 
   updateRiderMarker(e) {
@@ -244,6 +220,18 @@ class App extends Component {
     }));
   }
 
+  handleToggleInfoOpen = (markerData) => {
+    this.setState(state => ({
+      infoWindowOpened: markerData
+    }));
+  }
+
+  handleToggleInfoClose() {
+    this.setState(state => ({
+      infoWindowOpened: false
+    }));
+  }
+
   getH3Index() {
     return geoToH3(this.state.lat, this.state.lng, this.state.resolution)
   }
@@ -266,6 +254,9 @@ class App extends Component {
             onClickMap={this.handleOnClickMap}
             markerPosition={{ lat: this.state.lat, lng: this.state.lng }}
             cabPositions={this.state.cabPositions}
+            infoWindowOpened={this.state.infoWindowOpened}
+            handleMarkerClick={this.handleToggleInfoOpen}
+            handleInfoClick={this.handleToggleInfoClose}
           />   
         </div>
         <div style={{paddingRight: '20px'}} className='p-2'>
