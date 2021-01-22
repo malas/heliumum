@@ -49,15 +49,21 @@
    },
    {
       "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
-      "address":"11HkKx3cZq3fvUdetLQvog3H8cd3r7NF9DpvKbnYURkb8W2JvdF",
-      "lat":54.66754646242536,
-      "lng":25.25552169076159
-   },
-   {
-      "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
       "address":"11r6jHrDUFAjHgb1Y8ZY4NvqPxJoRgK8w5UYo427T3i5BHEQtaG",
       "lat":54.69589673619779,
       "lng":25.27922827146714
+   },
+   {
+      "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
+      "address":"11HkKx3cZq3fvUdetLQvog3H8cd3r7NF9DpvKbnYURkb8W2JvdF",
+      "lat":54.701262037947245,
+      "lng":25.22213265935464
+   },
+   {
+      "owner":"13ZgHi25fLvfbaQcSNzktDqHy4mG9VEFLojumGvmqFKGsXVmaMH",
+      "address":"11qyjJHxTY29Y1FrrXP9QxK9DbhR8LFpUGMc6DfuqmryAfMe3k5",
+      "lat":54.68035799827139,
+      "lng":25.25242994796802
    },
    {
       "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
@@ -107,6 +113,13 @@
       "lat":54.68766170285452,
       "lng":25.271091107336446
    },
+{
+      "owner":"13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
+      "address":"null",
+      "lat":54.682157,
+      "lng":25.312642
+   },
+
    {
       "owner":"12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G",
       "address":"11RHNsGEFWkFVe5ZBjoYv7SN2Zg4KC8mkJeauq81aq1kDst5fEr",
@@ -124,12 +137,6 @@
       "address":null,
       "lat":54.71835320484592,
       "lng":25.308280927321476
-   },
-   {
-      "owner":"13fnZtwwG9nSox7Srk3AtHMqQZ3q4bfdAztmJCR42g7BQoRB4Ym",
-      "address":null,
-      "lat":54.7182323644439,
-      "lng":25.306043965193975
    },
    {
       "owner":"13fnZtwwG9nSox7Srk3AtHMqQZ3q4bfdAztmJCR42g7BQoRB4Ym",
@@ -296,12 +303,6 @@
    {
       "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
       "address":null,
-      "lat":54.716434,
-      "lng":25.290809
-   },
-   {
-      "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
-      "address":null,
       "lat":54.703970,
       "lng":25.301175
    },
@@ -356,12 +357,6 @@
    {
       "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
       "address":null,
-      "lat":54.716434,
-      "lng":25.290809
-   },
-   {
-      "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
-      "address":null,
       "lat":54.703970,
       "lng":25.301175
    },
@@ -410,12 +405,6 @@
    {
       "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
       "address":null,
-      "lat":54.679250,
-      "lng":25.265959
-   },
-   {
-      "owner":"14Z2WXEAAw4Z32rDvJHNvFQz7tx6maZn8wnrrhmWMMjA32ojiKd",
-      "address":null,
       "lat":54.710695,
       "lng":25.246933
    },
@@ -454,18 +443,6 @@
       "address":null,
       "lat":54.69034168273996,
       "lng":25.287932839433235
-   },
-   {
-      "owner":"12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G",
-      "address":null,
-      "lat":54.69226401409042,
-      "lng":25.280669417613733
-   },
-   {
-      "owner":"12xrBZUnFJwRwn6vnxtGHDkobyKmDM7JK3oqDf89xdcWtNYwp8G",
-      "address":null,
-      "lat":54.692115191694576,
-      "lng":25.283115592128595
    },
    {
       "owner":"13da4XN3yCbZd6KDNEsmYicPDHDTpZ69s6Esyg4qkbM3rbsUBmz",
@@ -592,5 +569,108 @@
       "address":null,
       "lat":26.6489053,
       "lng":-81.9760808
+   },
+   {
+      "owner":"137SGoi3s6vocEN4nZZsU4wAgGez27L4ng4e4qmqmLvWa354jbv",
+      "address":null,
+      "lat":26.63035568591567,
+      "lng":-82.0251356624986
+   },
+   {
+      "owner":"12ye1K1sbGVffG1hQdczozS5Ykg6K6ZCLrSJFr4Duv4srP8GgD8",
+      "address":null,
+      "lat":26.635174041942353,
+      "lng":-81.99489344177532
+   },
+   {
+      "owner":"137SGoi3s6vocEN4nZZsU4wAgGez27L4ng4e4qmqmLvWa354jbv",
+      "address":null,
+      "lat":26.690410939298456,
+      "lng":-81.94717042677242
+   },
+   {
+      "owner":"13Ka2pN4dSBSV9o6DQVLFCzYRfHqtZszgDvm9kf4fUqnXdbk9fT",
+      "address":null,
+      "lat":26.679747892120968,
+      "lng":-81.86922842049097
+   },
+   {
+      "owner":"14oQsXGCju1cMrE1kEfw4seuPzMUKLLCeCcvykv4Ghj6SjvsD6m",
+      "address":null,
+      "lat":26.66270311361473,
+      "lng":-81.95281805628704
+   },
+   {
+      "owner":"14oQsXGCju1cMrE1kEfw4seuPzMUKLLCeCcvykv4Ghj6SjvsD6m",
+      "address":null,
+      "lat":26.65447313495052,
+      "lng":-81.95576431757542
+   },
+   {
+      "owner":"139gyRbRaQgTcfmCpLrUFjiop7gpEJMrgy8mPHv5GQjDpp7sr64",
+      "address":null,
+      "lat":26.611400195059627,
+      "lng":-81.96381306152357
+   },
+   {
+      "owner":"14oQsXGCju1cMrE1kEfw4seuPzMUKLLCeCcvykv4Ghj6SjvsD6m",
+      "address":null,
+      "lat":26.603679619654297,
+      "lng":-81.94532204275387
+   },
+   {
+      "owner":"139gyRbRaQgTcfmCpLrUFjiop7gpEJMrgy8mPHv5GQjDpp7sr64",
+      "address":null,
+      "lat":26.603728265353933,
+      "lng":-81.91694120973347
+   },
+   {
+      "owner":"13PKnk2ufbKgYaNf8vPK5gaQbZv7D83JB5vDhFb64tKb8zFbHEm",
+      "address":null,
+      "lat":26.580398060285447,
+      "lng":-81.76837492262534
+   },
+   {
+      "owner":"12ye1K1sbGVffG1hQdczozS5Ykg6K6ZCLrSJFr4Duv4srP8GgD8",
+      "address":null,
+      "lat":26.58523299577136,
+      "lng":-81.74145878611041
+   },
+   {
+      "owner":"12ye1K1sbGVffG1hQdczozS5Ykg6K6ZCLrSJFr4Duv4srP8GgD8",
+      "address":null,
+      "lat":26.583755808331496,
+      "lng":-81.73486190752804
+   },
+   {
+      "owner":"12wwzqc1ndQntPm3Bb7kSACamEkepAQfYEBaGxQb7MSbbmNMAvp",
+      "address":null,
+      "lat":26.354503238314805,
+      "lng":-81.81531330045847
+   },
+   {
+      "owner":"13KN5Qk1JW5giaF2g7fWCaT4BSnzP1T8uxMDsiiT6hnNyaPYA4Z",
+      "address":null,
+      "lat":26.381844864043902,
+      "lng":-81.77515446751529
+   },
+   {
+      "owner":"13E3CVFsoa32cLtQVzTCM8UscBk9PJvaj2nxnB6oMPt3SjFs2hp",
+      "address":null,
+      "lat":26.33732003132567,
+      "lng":-81.77829985327826
+   },
+   {
+      "owner":"14AdMnjW5o4LQBMWejCrmsyH9yM37oXdpXbepVSqCxTeJk9DdMz",
+      "address":null,
+      "lat":26.336103408339767,
+      "lng":-81.76648100873884
+   },
+   {
+      "owner":"14AdMnjW5o4LQBMWejCrmsyH9yM37oXdpXbepVSqCxTeJk9DdMz",
+      "address":null,
+      "lat":26.334819997299597,
+      "lng":-81.76266362238569
    }
+
 ]
